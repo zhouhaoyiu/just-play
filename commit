@@ -71,7 +71,7 @@ do
       then
         continue
       fi
-      message=$message$j
+      message=" "+$message$j
     done
   fi
 done
