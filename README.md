@@ -3,14 +3,14 @@
 play project
 [中文](./README_CN.md)
 
-## 构建
+## build
   
   ```bash
   yarn
   yarn build(default | dev | prod | watch-dev | watch-prod)
   ```
 
-## 运行
+## run
   
   ```bash
   yarn

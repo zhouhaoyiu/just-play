@@ -2,14 +2,14 @@
 
 [English](./README.md)
 
-## build
+## 构建
   
   ```bash
   yarn
   yarn build(default | dev | prod | watch-dev | watch-prod)
   ```
 
-## run
+## 运行
   
   ```bash
   yarn
