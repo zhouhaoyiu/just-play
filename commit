@@ -40,38 +40,10 @@ do
   then
     message=''
     _index=`expr $index + 1`
-    # -m后所有的参数都是commit message
-    for j in $*
+    # -m后所有的参数都是commit message,并且保留空格
+    for j in ${@:$_index}
     do
-      if [ $j = "-m" ]
-      then
-        continue
-      fi
-      if [ $j = "-ns" ]
-      then
-        continue
-      fi
-      if [ $j = "-np" ]
-      then
-        continue
-      fi
-      if [ $j = "-h" ]
-      then
-        continue
-      fi
-      if [ $j = "-v" ]
-      then
-        continue
-      fi
-      if [ $j = "-a" ]
-      then
-        continue
-      fi
-      if [ $j = "-m" ]
-      then
-        continue
-      fi
-      message=" $message$j"
+      message=$message$j" "
     done
   fi
 done
