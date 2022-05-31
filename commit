@@ -38,6 +38,7 @@ do
 
   if [ $i = "-m" ]
   then
+    message=''
     _index=`expr $index + 1`
     message+=$(echo $* | cut -d " " -f $_index)
   fi
