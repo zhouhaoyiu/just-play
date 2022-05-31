@@ -1,44 +1,46 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
-const isProd = process.env.NODE_ENV === 'production'
-function resolve(dir) {
-  return path.resolve(__dirname, '..', dir)
-}
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  mode: isProd ? 'production' : 'development',
-  entry: './src/index.ts',
+  mode: isProd ? "production" : "development",
+  entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, './dist'),//打包后的文件存放的地方
-    filename: 'bundle.js'   //打包后输出文件的文件名
+    path: path.resolve(__dirname, "./dist"), //打包后的文件存放的地方
+    filename: "bundle.js", //打包后输出文件的文件名
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: [".ts", ".js", "css"],
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader'
+        use: "ts-loader",
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
-    ]
+    ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: `[name]_[contenthash:8].css`,
+      chunkFilename: `[id].css`
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: "./src/index.html",
     })
   ],
-  devtool: isProd ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
+  devtool: isProd ? "cheap-module-source-map" : "cheap-module-eval-source-map",
   devServer: {
-    host: 'localhost', // 主机名
+    host: "localhost", // 主机名
     port: 8081, //端口
-    open: false //自定打开浏览器
+    open: false, //自定打开浏览器
   },
-}
+};

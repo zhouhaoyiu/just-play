@@ -1,5 +1,5 @@
 let a = new Promise<string>((resolve, reject) => {
-  resolve('hello');
+  resolve('hello world');
 });
 
 export {

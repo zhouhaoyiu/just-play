@@ -1,5 +1,8 @@
 import { a } from "./moduleA";
 
-console.log(await a);
+(async (): Promise<void> => {
+  console.log(await a);
+  document.write("<div id='main'><div class='info'>" + (await a) + "</div></div>");
+})();
 
-void("author: zhy")
+import "./css/index.css";
