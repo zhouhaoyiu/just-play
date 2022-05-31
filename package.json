@@ -1,0 +1,33 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:default": "webpack --config webpack.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build:watch": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "Zhou Hao Yu",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "typescript": "^4.7.2"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^4.0.0-alpha",
+    "ts-loader": "^8.4.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  }
+}
