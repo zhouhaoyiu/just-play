@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StyleLintPlugin = require("stylelint-webpack-plugin");
 const path = require("path");
 
 const isProd = process.env.NODE_ENV === "production";
@@ -13,7 +14,7 @@ module.exports = {
     filename: "bundle.js", //打包后输出文件的文件名
   },
   resolve: {
-    extensions: [".ts", ".js", "css"],
+    extensions: [".ts", ".js", ".css", '.scss'],
   },
   module: {
     rules: [
@@ -22,20 +23,23 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: `[name]_[contenthash:8].css`,
-      chunkFilename: `[id].css`
+      chunkFilename: `[id].css`,
+    }),
+    new StyleLintPlugin({
+      files: ["*.{css,scss,sass,less}"],
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-    })
+    }),
   ],
   devtool: isProd ? "cheap-module-source-map" : "cheap-module-eval-source-map",
   devServer: {

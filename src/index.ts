@@ -5,4 +5,4 @@ import { a } from "./moduleA";
   document.write("<div id='main'><div class='info'>" + (await a) + "</div></div>");
 })();
 
-import "./css/index.css";
+import "./css/index.scss";

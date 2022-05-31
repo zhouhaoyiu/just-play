@@ -1,16 +1,15 @@
 # just-play
 
-play project
-[中文](./README_CN.md)
+[English](./README.md)
 
-## 构建
+## build
   
   ```bash
   yarn
   yarn build
   ```
 
-## 运行
+## run
   
   ```bash
   yarn
