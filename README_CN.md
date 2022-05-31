@@ -6,12 +6,12 @@
   
   ```bash
   yarn
-  yarn build
+  yarn build(default | dev | prod | watch-dev | watch-prod)
   ```
 
 ## run
   
   ```bash
   yarn
-  yarn run dev
+  yarn serve:(dev | prod)
   ```

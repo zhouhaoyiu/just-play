@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+
+    "serve:dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open",
+    "serve:prod": "cross-env NODE_ENV=production webpack-dev-server --config webpack.config.js --open",
+
     "build:default": "webpack --config webpack.config.js",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "build:watch": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch"
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:watch-dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch",
+    "build:watch-prod": "cross-env NODE_ENV=production webpack --config webpack.config.js --watch"
   },
   "keywords": [
     "study"

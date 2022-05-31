@@ -7,12 +7,12 @@ play project
   
   ```bash
   yarn
-  yarn build
+  yarn build(default | dev | prod | watch-dev | watch-prod)
   ```
 
 ## 运行
   
   ```bash
   yarn
-  yarn run dev
+  yarn serve:(dev | prod)
   ```
