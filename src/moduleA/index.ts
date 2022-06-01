@@ -17,4 +17,4 @@ interface IOptions {
   age: number;
 }
 
-export { a, Study };
+export { a, Study, IOptions };

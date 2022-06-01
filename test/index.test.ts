@@ -1,8 +1,8 @@
-import { Study } from "../src/moduleA";
+import { IOptions, Study } from "../src/moduleA";
 
-const name = "test";
-const age = 22
-const testInfo = { name, age };
+const name: string = "test";
+const age: number = 22;
+const testInfo: IOptions = { name, age };
 
 describe("Study", () => {
   test("should be defined", () => {
