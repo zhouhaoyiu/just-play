@@ -1,7 +1,4 @@
-import { a } from './moduleA';
-
-declare const study: {
-  a: typeof a;
-};
-
-export default study;
+// Type definitions for ./index.ts
+// Project: [LIBRARY_URL_HERE] 
+// Definitions by: [YOUR_NAME_HERE] <[YOUR_URL_HERE]> 
+// Definitions: https://github.com/borisyankov/DefinitelyTyped

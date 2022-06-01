@@ -6,16 +6,12 @@
 /**
  * 
  */
-declare interface Study {
-		
-	/**
-	 * 
-	 */
-	new ();
-		
-	/**
-	 * 
-	 * @param string 
-	 */
-	name(string : any): void;
-}
+export declare var a : boolean;
+
+/**
+ * 
+ * @param _ 
+ * @param _ 
+ * @return  
+ */
+declare function getName(_ : any, _ : any): /* !this.name */ any;

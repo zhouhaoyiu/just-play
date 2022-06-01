@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "serve:dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open",
     "serve:prod": "cross-env NODE_ENV=production webpack-dev-server --config webpack.config.js --open",
-
     "build:default": "webpack --config webpack.config.js",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
@@ -27,6 +25,7 @@
     "stylelint": "^14.8.5",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-webpack-plugin": "^3.3.0",
+    "tern": "^0.24.3",
     "typescript": "^4.7.2"
   },
   "devDependencies": {
@@ -43,7 +42,7 @@
     "ts-loader": "^8.4.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.2"
+    "webpack-dev-server": "^4.9.1"
   },
   "browserslist": [
     "> 1%",
