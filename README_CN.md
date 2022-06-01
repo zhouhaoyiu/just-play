@@ -16,8 +16,8 @@
   yarn serve:(dev | prod)
   ```
 
-## 生成d.ts
+## 测试
   
   ```bash
-  dtsmake -s [path]
+  yarn test
   ```
