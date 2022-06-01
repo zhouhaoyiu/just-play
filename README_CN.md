@@ -15,3 +15,9 @@
   yarn
   yarn serve:(dev | prod)
   ```
+
+## 生成d.ts
+  
+  ```bash
+  dtsmake -s [path]
+  ```

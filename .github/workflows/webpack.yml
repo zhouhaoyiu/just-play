@@ -25,4 +25,5 @@ jobs:
     - name: Build
       run: |
         yarn
+        yarn jest
         yarn build:prod

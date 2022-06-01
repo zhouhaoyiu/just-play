@@ -1,4 +1,4 @@
-import { a, getName } from "./funcA";
+import { a, getName, getAge, getInfo } from "./funcA";
 
 class Study {
   name: string;
@@ -6,8 +6,10 @@ class Study {
   constructor(options: IOptions) {
     this.name = options.name;
     this.age = options.age;
-  };
+  }
   getName: () => string = getName;
+  getAge: () => number = getAge;
+  getInfo: () => string = getInfo;
 }
 
 interface IOptions {
@@ -15,4 +17,4 @@ interface IOptions {
   age: number;
 }
 
-export { a, Study };
+export { a, Study, IOptions };
