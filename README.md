@@ -3,22 +3,26 @@
 play project
 [中文](./README_CN.md)
 
-## build
+## install dependence
 
 ```bash
 yarn
+```
+
+## build
+
+```bash
 yarn build(default | dev | prod | watch-dev | watch-prod)
 ```
 
 ## run
 
 ```bash
-yarn
 yarn serve:(dev | prod)
 ```
 
-## dtsmake
+## test
 
 ```bash
-dtsmake -s [path]
+yarn test
 ```
