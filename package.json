@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "serve:dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open",
     "serve:prod": "cross-env NODE_ENV=production webpack-dev-server --config webpack.config.js --open",
     "build:default": "webpack --config webpack.config.js",
@@ -29,16 +29,19 @@
     "typescript": "^4.7.2"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.1",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^4.0.0",
     "html-webpack-plugin": "^4.0.0-alpha",
+    "jest": "^28.1.0",
     "mini-css-extract-plugin": "^1.3.4",
     "postcss": "^8.3.11",
     "postcss-loader": "4.2.0",
     "postcss-preset-env": "^7.0.0",
     "sass-loader": "7.3.1",
     "style-loader": "^1.2.1",
+    "ts-jest": "^28.0.3",
     "ts-loader": "^8.4.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
